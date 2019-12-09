@@ -1,0 +1,24 @@
+uuid: 3f8ae694-6c76-44ea-9ae8-b5d1676ad602
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_de_fin
+    - node.type.programmes
+  module:
+    - datetime
+id: node.programmes.field_date_de_fin
+field_name: field_date_de_fin
+entity_type: node
+bundle: programmes
+label: 'Date de fin'
+description: 'Date et heure de fin du programme'
+required: true
+translatable: false
+default_value:
+  -
+    default_date_type: relative
+    default_date: '+1 hour'
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,18 @@
+uuid: 50bd4ed1-9772-4143-a8e3-d8efed2b4b9f
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Programmes
+type: programmes
+description: 'Formulaire de création d''un programmes'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

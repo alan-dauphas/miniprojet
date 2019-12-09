@@ -1,0 +1,21 @@
+uuid: 5e438b15-469c-40a3-af4b-3b2388f3bbc7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.hotels
+  module:
+    - text
+id: node.hotels.field_description
+field_name: field_description
+entity_type: node
+bundle: hotels
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

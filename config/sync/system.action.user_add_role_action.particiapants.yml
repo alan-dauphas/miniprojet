@@ -1,0 +1,14 @@
+uuid: 7eccd3e9-3caa-49fa-be4a-876f3795f823
+langcode: fr
+status: true
+dependencies:
+  config:
+    - user.role.particiapants
+  module:
+    - user
+id: user_add_role_action.particiapants
+label: 'Ajouter le rôle Particiapants aux utilisateurs sélectionnés'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: particiapants

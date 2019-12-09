@@ -1,0 +1,14 @@
+uuid: ea287501-8a87-4306-8253-d67b8345f17d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - user.role.particiapants
+  module:
+    - user
+id: user_remove_role_action.particiapants
+label: 'Enlever le rôle Particiapants des utilisateurs sélectionnés'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: particiapants

@@ -1,0 +1,14 @@
+uuid: d390745b-3e2e-4292-9409-87bf91a68e49
+langcode: fr
+status: true
+dependencies:
+  config:
+    - user.role.organisateur
+  module:
+    - user
+id: user_add_role_action.organisateur
+label: 'Ajouter le rôle organisateur aux utilisateurs sélectionnés'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: organisateur

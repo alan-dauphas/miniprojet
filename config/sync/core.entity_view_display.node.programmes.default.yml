@@ -1,0 +1,102 @@
+uuid: fa4ae4c7-d177-4b62-90fb-4cc1c209cad8
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.programmes.body
+    - field.field.node.programmes.field_budget
+    - field.field.node.programmes.field_date_de_debut
+    - field.field.node.programmes.field_date_de_fin
+    - field.field.node.programmes.field_hotels
+    - field.field.node.programmes.field_inscription
+    - field.field.node.programmes.field_organisateurs
+    - field.field.node.programmes.field_participants
+    - node.type.programmes
+  module:
+    - datetime
+    - text
+    - user
+    - webform
+id: node.programmes.default
+targetEntityType: node
+bundle: programmes
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_budget:
+    weight: 2
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_date_de_debut:
+    weight: 3
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_date_de_fin:
+    weight: 4
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_hotels:
+    weight: 9
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_inscription:
+    weight: 8
+    label: above
+    settings:
+      source_entity: true
+    third_party_settings: {  }
+    type: webform_entity_reference_entity_view
+    region: content
+  field_organisateurs:
+    weight: 6
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_participants:
+    weight: 5
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

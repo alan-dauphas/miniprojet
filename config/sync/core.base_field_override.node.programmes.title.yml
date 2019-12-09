@@ -1,0 +1,18 @@
+uuid: b72993f2-feea-463b-aff7-ca6f974ef88e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.programmes
+id: node.programmes.title
+field_name: title
+entity_type: node
+bundle: programmes
+label: Titre
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

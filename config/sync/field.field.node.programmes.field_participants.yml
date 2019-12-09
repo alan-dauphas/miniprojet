@@ -1,0 +1,21 @@
+uuid: 5c25afbb-fa50-430b-a602-c34f78a98c4e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_participants
+    - node.type.programmes
+id: node.programmes.field_participants
+field_name: field_participants
+entity_type: node
+bundle: programmes
+label: Participants
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings: {  }
+field_type: entity_reference

@@ -1,0 +1,8 @@
+role_to_select:
+  particiapants: particiapants
+  administrator: 0
+  organisateur: 0
+registration_mode: user
+_core:
+  default_config_hash: o1wWkhSOJotsHFgvzESaUOiTWhLak62cKBDyEtewAIM
+langcode: fr

@@ -1,0 +1,5 @@
+projetgr4.programmes:
+  title: Programmes
+  route_name: projetgr4.programmes
+  base_route: entity.user.canonical
+  weight: 2

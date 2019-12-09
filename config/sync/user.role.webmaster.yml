@@ -1,0 +1,28 @@
+uuid: ddbb65f4-b72c-4edd-9adf-6c709856cde2
+langcode: fr
+status: true
+dependencies: {  }
+id: webmaster
+label: Webmaster
+weight: 5
+is_admin: null
+permissions:
+  - 'administer comments'
+  - 'create hotels content'
+  - 'create programmes content'
+  - 'delete any hotels content'
+  - 'delete any programmes content'
+  - 'delete hotels revisions'
+  - 'delete own hotels content'
+  - 'delete own programmes content'
+  - 'delete programmes revisions'
+  - 'edit any hotels content'
+  - 'edit any programmes content'
+  - 'edit own comments'
+  - 'edit own hotels content'
+  - 'edit own programmes content'
+  - 'revert hotels revisions'
+  - 'revert programmes revisions'
+  - 'view hotels revisions'
+  - 'view own unpublished content'
+  - 'view programmes revisions'

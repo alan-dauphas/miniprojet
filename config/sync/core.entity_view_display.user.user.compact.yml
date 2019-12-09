@@ -1,0 +1,28 @@
+uuid: d77f270a-f7db-4f1a-bdc3-3fd86129f659
+langcode: fr
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.user.compact
+    - field.field.user.user.field_adresse
+    - field.field.user.user.field_indications_particulieres
+    - field.field.user.user.field_nom
+    - field.field.user.user.field_prenom
+  module:
+    - user
+_core:
+  default_config_hash: '-cLsS3M3JycipXQt9rEb81_HxKneReoGuRh8ijcOPXs'
+id: user.user.compact
+targetEntityType: user
+bundle: user
+mode: compact
+content: {  }
+hidden:
+  field_adresse: true
+  field_indications_particulieres: true
+  field_nom: true
+  field_organisation_societe: true
+  field_prenom: true
+  field_site_personnel: true
+  langcode: true
+  member_for: true

@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains projetgr4.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function projetgr4_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the projetgr4 module.
+    case 'help.page.projetgr4':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}

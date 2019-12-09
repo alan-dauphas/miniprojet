@@ -1,0 +1,22 @@
+uuid: bb2f1e40-7b0a-40b8-82ad-6fa84e95d6a9
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - nexus
+_core:
+  default_config_hash: auH-2-QXZxcQz-LQIrvor3PtBNHRsO0DLkEH-Ln4Gpg
+id: nexus_powered
+theme: nexus
+region: footer_second
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

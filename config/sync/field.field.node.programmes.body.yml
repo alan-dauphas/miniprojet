@@ -1,0 +1,22 @@
+uuid: 77d96b1a-865f-4b2a-bd6e-61b354cb26d2
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.programmes
+  module:
+    - text
+id: node.programmes.body
+field_name: body
+entity_type: node
+bundle: programmes
+label: 'Description et But du Programme'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

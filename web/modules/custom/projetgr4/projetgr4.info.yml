@@ -1,0 +1,11 @@
+name: 'projetgr4'
+type: module
+description: 'My Awesome Module'
+core: 8.x
+package: 'Projetgr4'
+
+dependencies:
+  - admin_toolbar:admin_toolbar
+
+datestamp: 1558552277
+# configure: projetgr4.admin_form

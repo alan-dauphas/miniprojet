@@ -1,0 +1,15 @@
+uuid: 6d695296-520b-499a-872a-8192567f0b11
+name: DrupalProject
+mail: riazealan@gmail.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /accueil
+admin_compact_mode: false
+weight_select_max: 100
+langcode: fr
+default_langcode: fr
+_core:
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE
+mail_notification: ''

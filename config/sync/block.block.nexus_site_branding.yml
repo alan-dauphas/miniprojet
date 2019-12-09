@@ -1,0 +1,25 @@
+uuid: 3df7a992-1458-4a39-9364-da2a133a37b0
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - nexus
+_core:
+  default_config_hash: 32P1o_YHecHsgAQuN019rNAZ1xrWwYTqhFO0k_EG_qE
+id: nexus_site_branding
+theme: nexus
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

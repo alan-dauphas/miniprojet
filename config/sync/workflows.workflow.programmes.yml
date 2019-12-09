@@ -1,0 +1,67 @@
+uuid: 1b31d823-2b68-407b-87bd-afddd17de931
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.hotels
+    - node.type.programmes
+  module:
+    - content_moderation
+id: programmes
+label: Programmes
+type: content_moderation
+type_settings:
+  states:
+    a_valider:
+      published: false
+      default_revision: false
+      label: 'A valider'
+      weight: -1
+    draft:
+      published: false
+      default_revision: false
+      label: Brouillon
+      weight: -2
+    published:
+      published: true
+      default_revision: true
+      label: Publié
+      weight: 0
+  transitions:
+    create_new_draft:
+      label: 'Créer nouveau brouillon'
+      to: draft
+      weight: -3
+      from:
+        - draft
+        - published
+    en_attente_de_validation:
+      label: 'En attente de validation'
+      from:
+        - draft
+      to: a_valider
+      weight: -2
+    publish:
+      label: Publié
+      to: published
+      weight: 1
+      from:
+        - draft
+        - published
+    rejet_de_validation:
+      label: 'Rejet de validation'
+      from:
+        - a_valider
+      to: draft
+      weight: -1
+    validation:
+      label: Validation
+      from:
+        - a_valider
+      to: published
+      weight: 0
+  entity_types:
+    node:
+      - hotels
+      - programmes
+  default_moderation_state: draft

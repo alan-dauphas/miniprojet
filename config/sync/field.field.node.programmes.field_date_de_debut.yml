@@ -1,0 +1,24 @@
+uuid: 1d1508b4-4fb6-4a67-ae28-a157e81e1551
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_de_debut
+    - node.type.programmes
+  module:
+    - datetime
+id: node.programmes.field_date_de_debut
+field_name: field_date_de_debut
+entity_type: node
+bundle: programmes
+label: 'Date de début'
+description: 'Date et heure de début de votre programme'
+required: true
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

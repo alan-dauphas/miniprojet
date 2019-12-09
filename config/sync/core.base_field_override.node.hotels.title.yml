@@ -1,0 +1,18 @@
+uuid: 86d14ffc-7e60-474d-a33b-8830e19a0b9d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.hotels
+id: node.hotels.title
+field_name: title
+entity_type: node
+bundle: hotels
+label: 'Ajouter Hôtels'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

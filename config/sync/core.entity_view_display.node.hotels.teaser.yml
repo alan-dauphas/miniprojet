@@ -1,0 +1,26 @@
+uuid: bf2e4114-eb43-4741-bb35-6b4380a18ff5
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.hotels
+  module:
+    - user
+id: node.hotels.teaser
+targetEntityType: node
+bundle: hotels
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_adresse: true
+  field_description: true
+  field_email: true
+  field_prix: true
+  field_telephone: true
+  langcode: true

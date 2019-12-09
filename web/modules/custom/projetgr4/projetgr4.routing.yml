@@ -1,0 +1,8 @@
+projetgr4.programmes:
+  path: 'user/{user}/programmes'
+  defaults:
+    _title: 'programmes'
+    _controller: '\Drupal\projetgr4\Controller\ProgrammesController::programme_status'
+  requirements:
+    _access: 'TRUE'
+    

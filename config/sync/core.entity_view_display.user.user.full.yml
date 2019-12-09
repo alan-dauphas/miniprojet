@@ -1,0 +1,28 @@
+uuid: fac3063d-df65-47e2-99aa-491539cd9ba0
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.full
+    - field.field.user.user.field_adresse
+    - field.field.user.user.field_indications_particulieres
+    - field.field.user.user.field_nom
+    - field.field.user.user.field_prenom
+  module:
+    - user
+_core:
+  default_config_hash: V51QPCKkgNREKtSmB9Iu2wmAMEpktVpnzklWaZV8UYo
+id: user.user.full
+targetEntityType: user
+bundle: user
+mode: full
+content: {  }
+hidden:
+  field_adresse: true
+  field_indications_particulieres: true
+  field_nom: true
+  field_organisation_societe: true
+  field_prenom: true
+  field_site_personnel: true
+  langcode: true
+  member_for: true

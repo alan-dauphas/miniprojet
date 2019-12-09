@@ -1,0 +1,28 @@
+uuid: 637191c1-7ab3-48d4-8755-091434cca291
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_organisateurs
+    - node.type.programmes
+id: node.programmes.field_organisateurs
+field_name: field_organisateurs
+entity_type: node
+bundle: programmes
+label: Organisateurs
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

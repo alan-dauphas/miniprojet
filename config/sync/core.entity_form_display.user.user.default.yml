@@ -1,0 +1,85 @@
+uuid: 7c1ae1d6-3e7b-4465-8197-90165b37c771
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_adresse
+    - field.field.user.user.field_indications_particulieres
+    - field.field.user.user.field_nom
+    - field.field.user.user.field_organisation_societe
+    - field.field.user.user.field_prenom
+    - field.field.user.user.field_site_personnel
+  module:
+    - address
+    - user
+_core:
+  default_config_hash: K-1rBM8mTIkFp9RqOC2tMRUukOQ1xbRCfSKK8dEddnA
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  account:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  contact:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_adresse:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_indications_particulieres:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_nom:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_organisation_societe:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_prenom:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_site_personnel:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  language:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  timezone: true

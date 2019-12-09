@@ -1,0 +1,23 @@
+uuid: 026c9115-925d-48fe-af58-f2387fc1aac8
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_prix
+    - node.type.hotels
+id: node.hotels.field_prix
+field_name: field_prix
+entity_type: node
+bundle: hotels
+label: Prix
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

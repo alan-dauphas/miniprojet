@@ -1,0 +1,19 @@
+uuid: b01467aa-c43b-4236-9f41-fab718e58cfd
+langcode: fr
+status: false
+dependencies: {  }
+id: dev
+label: Dev
+description: ''
+folder: ../config/dev
+module:
+  devel: 0
+  devel_generate: 0
+  kint: 0
+  webprofiler: 0
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

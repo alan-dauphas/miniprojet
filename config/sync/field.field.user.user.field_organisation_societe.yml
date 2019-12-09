@@ -1,0 +1,20 @@
+uuid: 4989ed6f-9d22-4994-b315-941fb70fbb3f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_organisation_societe
+  module:
+    - user
+id: user.user.field_organisation_societe
+field_name: field_organisation_societe
+entity_type: user
+bundle: user
+label: Organisation/société
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

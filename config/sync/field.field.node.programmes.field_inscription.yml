@@ -1,0 +1,32 @@
+uuid: d18c20fb-7cef-4141-ba36-546cc2bf71fd
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_inscription
+    - node.type.programmes
+    - webform.webform.formulaire_d_adhesion
+  module:
+    - webform
+id: node.programmes.field_inscription
+field_name: field_inscription
+entity_type: node
+bundle: programmes
+label: Inscription
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_data: ''
+    status: open
+    open: ''
+    close: ''
+    target_uuid: 2d8c0ff5-f919-4494-858a-80dde0e0ded0
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: webform
