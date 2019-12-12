@@ -3,6 +3,7 @@
 namespace Drupal\projetgr4\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
+use Drupal\user\UserInterface;
 
 
 class ProgrammesController extends ControllerBase{
@@ -53,8 +54,8 @@ class ProgrammesController extends ControllerBase{
         ],
       ];
       return [$no_data_return_table];
-    }
 
+    }
 
 
   public function profile()
@@ -83,6 +84,5 @@ class ProgrammesController extends ControllerBase{
 
     return [$status_table];
   }
-
 
 }

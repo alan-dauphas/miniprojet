@@ -4,11 +4,9 @@ projetgr4.programmes:
   base_route: entity.user.canonical
   weight: 2
 
-<<<<<<< HEAD
-=======
 projetgr4.profile:
   title: profile
   route_name: projetgr4.profile
   base_route: entity.user.canonical
   weight: -1
->>>>>>> e3e451d7b832adabb7c6e913fa4ab4a502885ec6
+
