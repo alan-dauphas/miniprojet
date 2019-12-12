@@ -37,10 +37,12 @@ module:
   options: 0
   page_cache: 0
   path: 0
+  profile_role_access: 0
   projetgr4: 0
   quickedit: 0
   rdf: 0
   registration_role: 0
+  rules: 0
   search: 0
   serialization: 0
   shortcut: 0
@@ -48,6 +50,7 @@ module:
   taxonomy: 0
   text: 0
   toolbar: 0
+  typed_data: 0
   user: 0
   views_ui: 0
   webform: 0

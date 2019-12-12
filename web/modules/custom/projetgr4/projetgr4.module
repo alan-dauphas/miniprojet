@@ -6,19 +6,51 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
 
-/**
- * Implements hook_help().
- */
-function projetgr4_help($route_name, RouteMatchInterface $route_match) {
-  switch ($route_name) {
-    // Main module help for the projetgr4 module.
-    case 'help.page.projetgr4':
-      $output = '';
-      $output .= '<h3>' . t('About') . '</h3>';
-      $output .= '<p>' . t('My Awesome Module') . '</p>';
-      return $output;
 
-    default:
+  /**
+   * Implements hook_help().
+   */
+  function projetgr4_help($route_name, RouteMatchInterface $route_match)
+  {
+    switch ($route_name) {
+      // Main module help for the projetgr4 module.
+      case 'help.page.projetgr4':
+        $output = '';
+        $output .= '<h3>' . t('About') . '</h3>';
+        $output .= '<p>' . t('My Awesome Module') . '</p>';
+        return $output;
+
+      default:
+    }
   }
-}
+    /**
+     * Implements hook_form_FORM_ID_alter().
+     */
+
+  function projetgr4_form_user_login_form_alter(&$form, FormStateInterface $form_state) {
+    $form['#submit'][] = 'projetgr4_user_login_submit';
+  }
+
+    /**
+     * Form submission handler for user_login_form().
+     *
+     * Redirects the user to the profile after logging in.
+     */
+    function projetgr4_user_login_submit(&$form, FormStateInterface $form_state) {
+      $user = \Drupal::currentUser()->id();
+      ksm($user);
+      $url = Url::fromRoute('projetgr4.profile', ['user' => $user]);
+
+      // Check if a destination was set, probably on an exception controller.
+
+      $request = \Drupal::service('request_stack')->getCurrentRequest();
+      if (!$request->request->has('destination')) {
+        $form_state->setRedirectUrl($url);
+      }
+      else {
+        $request->query->set('destination', $request->request->get('destination'));
+      }
+    }
