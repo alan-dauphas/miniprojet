@@ -4,7 +4,8 @@ projetgr4.programmes:
     _title: 'programmes'
     _controller: '\Drupal\projetgr4\Controller\ProgrammesController::programme_status'
   requirements:
-    _access: 'TRUE'
+    _custom_access: '\Drupal\projetgr4\Controller\ProgrammesController::access'
+
 
 projetgr4.profile:
   path: 'user/{user}/profile'
@@ -12,5 +13,6 @@ projetgr4.profile:
     _title: 'profile'
     _controller: '\Drupal\projetgr4\Controller\ProgrammesController::profile'
   requirements:
-    _access: 'TRUE'
+    _custom_access: '\Drupal\projetgr4\Controller\ProgrammesController::access'
+
 
