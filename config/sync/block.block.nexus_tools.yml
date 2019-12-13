@@ -6,6 +6,7 @@ dependencies:
     - system.menu.tools
   module:
     - system
+    - user
   theme:
     - nexus
 _core:
@@ -24,4 +25,12 @@ settings:
   level: 1
   depth: 0
   expand_all_items: false
-visibility: {  }
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      administrator: administrator
+      organisateur: organisateur
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
