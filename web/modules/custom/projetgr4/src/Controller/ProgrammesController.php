@@ -68,33 +68,33 @@ class ProgrammesController extends ControllerBase{
     }
 
 
-//  public function list_participants(Drupal\node\NodeInterface $node){
-//
-//      $nbNode = $node->id(); // Retourne le numéro (id) du node
-//
-//      $list = $this->entityTypeManager()->getStorage('webform_submission')
-//        ->loadByProperties(['entity_id'=> $nbNode]);
-//
-//      $participants = [];
-//
-//      foreach($list as $owner){
-//        $owners = $owner->getOwnerId(); // Retourne le numéro (id) d'un participants
-//        $account = Drupal::entityTypeManager()->getStorage('user')->load($owners);
-//
-//        $prenom = $account->get('field_prenom')->value;
-//        $nom = $account->get('field_nom')->value;
-//
-//        $participant = $prenom . ' ' . ' ' . $nom;
-//
-//        $participants[] = $participant;
-//      }
-//
-//
-//        return [
-//          '#theme' => 'item_list',
-//          '#items' => $participants,
-//          '#title' => $this->t('Liste des participants'),
-//        ];
-//      }
+  public function list_participants(Drupal\node\NodeInterface $node){
+
+      $nbNode = $node->id(); // Retourne le numéro (id) du node
+
+      $list = $this->entityTypeManager()->getStorage('webform_submission')
+        ->loadByProperties(['entity_id'=> $nbNode]);
+
+      $participants = [];
+
+      foreach($list as $owner){
+        $owners = $owner->getOwnerId(); // Retourne le numéro (id) d'un participants
+        $account = Drupal::entityTypeManager()->getStorage('user')->load($owners);
+
+        $prenom = $account->get('field_prenom')->value;
+        $nom = $account->get('field_nom')->value;
+
+        $participant = $prenom . ' ' . ' ' . $nom;
+
+        $participants[] = $participant;
+      }
+
+
+        return [
+          '#theme' => 'item_list',
+          '#items' => $participants,
+          '#title' => $this->t('Liste des participants'),
+        ];
+      }
 
 }
