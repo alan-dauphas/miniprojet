@@ -41,7 +41,7 @@ use Drupal\Core\Url;
      */
     function projetgr4_user_login_submit(&$form, FormStateInterface $form_state) {
       $user = \Drupal::currentUser()->id();
-      ksm($user);
+
       $url = Url::fromRoute('projetgr4.profile', ['user' => $user]);
 
       // Check if a destination was set, probably on an exception controller.
