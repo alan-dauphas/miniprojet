@@ -9,3 +9,9 @@ projetgr4.profile:
   route_name: projetgr4.profile
   base_route: entity.user.canonical
   weight: -1
+
+projetgr4.participants:
+  title: Participants
+  route_name: projetgr4.participants
+  base_route: entity.node.canonical
+  weight: 30

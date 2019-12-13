@@ -16,3 +16,17 @@ projetgr4.profile:
     _custom_access: '\Drupal\projetgr4\Controller\ProgrammesController::access'
 
 
+projetgr4.participants:
+  path: 'node/participants/{node}'
+  defaults:
+    _title: 'participants'
+    _controller: '\Drupal\projetgr4\Controller\ProgrammesController::list_participants'
+    node: ''
+  requirements:
+    _access: 'TRUE'
+  options:
+    parameters:
+      node:
+        type: entity:node
+
+
