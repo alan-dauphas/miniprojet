@@ -96,5 +96,5 @@ class ProgrammesController extends ControllerBase{
           '#title' => $this->t('Liste des participants'),
         ];
       }
-
+  public function list_participantss(Drupal\node\NodeInterface $node){}
 }
