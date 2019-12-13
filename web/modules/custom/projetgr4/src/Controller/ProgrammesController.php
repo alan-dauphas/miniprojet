@@ -2,16 +2,16 @@
 
 namespace Drupal\projetgr4\Controller;
 
+use Drupal;
 use Drupal\Core\Controller\ControllerBase;
-
 
 
 class ProgrammesController extends ControllerBase{
 
     public function programme_status()
     {
-      $user = \Drupal::routeMatch()->getParameter('user');
-      $query = \Drupal::database()->select('webform_submission', 's');
+      $user = Drupal::routeMatch()->getParameter('user');
+      $query = Drupal::database()->select('webform_submission', 's');
       $query->fields('s', ['sid', 'entity_id'])
         ->condition('s.uid', $user);
       $sid_entity_id = $query->execute();
@@ -19,7 +19,7 @@ class ProgrammesController extends ControllerBase{
         $user_programme_status = [];
         foreach($sid_entity_id as $info_ids){
 
-        $query = \Drupal::database()->select('webform_submission', 'w');
+        $query = Drupal::database()->select('webform_submission', 'w');
         $query->join('webform_submission_data', 'd', "d.sid = $info_ids->sid AND d.name = 'status'");
         $query->join('node_field_data', 'n', "n.nid = $info_ids->entity_id");
         $result = $query
@@ -58,9 +58,9 @@ class ProgrammesController extends ControllerBase{
 
   public function profile()
   {
-    $user = \Drupal::routeMatch()->getParameter('user');
-    $account = \Drupal\user\Entity\User::load($user);
-    $date_formatter = \Drupal::service('date.formatter');
+    $user = Drupal::routeMatch()->getParameter('user');
+    $account = Drupal\user\Entity\User::load($user);
+    $date_formatter = Drupal::service('date.formatter');
     $user_profile = [];
      $user_profile[] = [
                         $account->get('field_nom')->value,
@@ -82,5 +82,35 @@ class ProgrammesController extends ControllerBase{
 
     return [$status_table];
   }
+
+
+  public function list_participants(Drupal\node\NodeInterface $node){
+
+      $nbNode = $node->id(); // Retourne le numéro (id) du node
+
+      $list = $this->entityTypeManager()->getStorage('webform_submission')
+        ->loadByProperties(['entity_id'=> $nbNode]);
+
+      $participants = [];
+
+      foreach($list as $owner){
+        $owners = $owner->getOwnerId(); // Retourne le numéro (id) d'un participants
+        $account = Drupal::entityTypeManager()->getStorage('user')->load($owners);
+
+        $prenom = $account->get('field_prenom')->value;
+        $nom = $account->get('field_nom')->value;
+
+        $participant = $prenom . ' ' . ' ' . $nom;
+
+        $participants[] = $participant;
+      }
+
+
+        return [
+          '#theme' => 'item_list',
+          '#items' => $participants,
+          '#title' => $this->t('Liste des participants'),
+        ];
+      }
 
 }

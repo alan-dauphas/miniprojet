@@ -14,3 +14,17 @@ projetgr4.profile:
   requirements:
     _access: 'TRUE'
 
+projetgr4.participants:
+  path: 'node/participants/{node}'
+  defaults:
+    _title: 'participants'
+    _controller: '\Drupal\projetgr4\Controller\ProgrammesController::list_participants'
+    node: ''
+  requirements:
+    _access: 'TRUE'
+  options:
+    parameters:
+      node:
+        type: entity:node
+
+
