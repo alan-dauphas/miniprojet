@@ -1,0 +1,33 @@
+/* logo size */
+.img-fluid {
+  max-width: 15%;
+  height: auto;
+}
+
+/* title accueil align center in his block */
+.js-quickedit-page-title, .title {
+  text-align: center;
+}
+
+
+/* underlines the link of the current page */
+a.navbar-link .active{
+  text-decoration: underline;
+}
+
+
+.navbar-brand {
+  font-size: 2em;
+  text-align: inherit;
+}
+
+.navbar-toggler-icon {
+  background-color: #D7392E;
+  border-radius: 5px;
+}
+
+.navbar-toggler-icon:hover {
+  background-color: #a90f19;
+  border: 1px solid #0062CC;
+}
+

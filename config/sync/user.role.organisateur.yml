@@ -7,8 +7,8 @@ label: Organisateur
 weight: 3
 is_admin: null
 permissions:
+  - 'access content overview'
   - 'access own webform configuration'
-  - 'access toolbar'
   - 'access user profiles'
   - 'access webform submission user'
   - 'administer webform element access'

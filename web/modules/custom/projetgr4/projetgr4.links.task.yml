@@ -3,3 +3,21 @@ projetgr4.programmes:
   route_name: projetgr4.programmes
   base_route: entity.user.canonical
   weight: 2
+
+projetgr4.profile:
+  title: Profile
+  route_name: projetgr4.profile
+  base_route: entity.user.canonical
+  weight: -1
+
+projetgr4.participants:
+  title: Participants
+  route_name: projetgr4.participants
+  base_route: entity.node.canonical
+  weight: 30
+
+projetgr4.email:
+  title: Send Email
+  route_name: projetgr4.email
+  base_route: entity.user.canonical
+  weight: 5
