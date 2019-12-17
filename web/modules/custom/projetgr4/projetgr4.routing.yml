@@ -29,4 +29,10 @@ projetgr4.participants:
       node:
         type: entity:node
 
-
+projetgr4.email:
+  path: 'user/{user}/email'
+  defaults:
+    _title: 'email'
+    _form: '\Drupal\projetgr4\Form\EmailForm'
+  requirements:
+    _permission: 'administrator, organisateur'
