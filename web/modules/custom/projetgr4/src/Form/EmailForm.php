@@ -35,26 +35,51 @@ class EmailForm extends FormBase
     ];
 
 
-    $user = \Drupal::entityTypeManager()->getStorage('webform_submission')->loadMultiple();
+//    $user = \Drupal::entityTypeManager()->getStorage('webform_submission')->loadMultiple();
+//
+//    $user_info = [];
+//    foreach ($user as $user_id)
+//    {
+//      $account = \Drupal\user\Entity\User::load($user_id->getOwnerId());
+////      $user_info[] = $account->get('field_nom')->value .' '. $account->get('field_prenom')->value;
+//      $user_info[$account->get('mail')->value] = $account->get('mail')->value;
+//
+//
+//    }
 
-    $user_info = [];
-    foreach ($user as $user_id)
-    {
-      $account = \Drupal\user\Entity\User::load($user_id->getOwnerId());
+    $form['mytable'] = array(
+      '#type' => 'table',
+      '#title' => 'List of Nodes',
+      '#header' => ["Checkbox","Name","Email"],
+    );
+
+      $user = \Drupal::entityTypeManager()->getStorage('webform_submission')->loadMultiple();
+
+      $user_info = [];
+      $user_name = [];
+      $i = 0;
+      foreach ($user as $user_id) {
+        $account = \Drupal\user\Entity\User::load($user_id->getOwnerId());
 //      $user_info[] = $account->get('field_nom')->value .' '. $account->get('field_prenom')->value;
-      $user_info[$account->get('mail')->value] = $account->get('mail')->value;
+        $user_info[$account->get('mail')->value] = $account->get('mail')->value;
+        $user_name[] = [$account->get('field_nom')->value . ' ' . $account->get('field_prenom')->value];
+
+        $form['mytable'][$i][''] = array(
+          '#type' => 'checkbox',
+          '#return_value' => $user_info[$account->get('mail')->value] = $account->get('mail')->value,
+        );
+        $form['mytable'][$i]['Name'] = array(
+          '#type' => 'label',
+          '#label' => $user_name,
+        );
+        $form['mytable'][$i]['Email'] = array(
+          '#type' => 'label',
+          '#label' => $user_info,
+        );
+        $i++;
+      }
 
 
-    }
-    ksm($user_info);
-    $form['users'] = [
-      '#type' => 'checkboxes',
-      '#title' => $this->t('Send Mail To'),
-      '#options' => $user_info,
-      '#name' => 'user_info',
-      '#access' => TRUE,
-      '#required' => TRUE,
-    ];
     $form['subject'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Subject'),
@@ -165,7 +190,7 @@ class EmailForm extends FormBase
 //    }
       $subject = $form_state->getValue('subject');
       $body = $form_state->getValue('email_body')['value'];
-      $user = $form_state->getValue('users');
+      $user = $form_state->getValue('mytable');
       $user1 = array_filter($user);
       ksm($user1);
 

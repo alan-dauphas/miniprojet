@@ -88,8 +88,6 @@ class ProgrammesController extends ControllerBase{
 
         $participants[] = $participant;
       }
-
-
         return [
           '#theme' => 'item_list',
           '#items' => $participants,
