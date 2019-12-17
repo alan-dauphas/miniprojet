@@ -1,0 +1,6 @@
+/* menu placed on the right */
+.navbar-expand-lg, .navbar-collapse {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 2%;
+}

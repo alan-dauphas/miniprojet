@@ -1,13 +1,13 @@
-uuid: a31e0caa-5ecb-4370-952a-8519a107e9a0
+uuid: 90f5626b-6501-4245-9f57-a3ff10697822
 langcode: fr
 status: true
 dependencies:
   theme:
-    - bartik
+    - bootstrap_barrio
 _core:
   default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
-id: bartik_local_tasks
-theme: bartik
+id: bootstrap_barrio_local_tasks
+theme: bootstrap_barrio
 region: content
 weight: -40
 provider: null
