@@ -32,7 +32,6 @@
         "drupal/libraries": "^3.0@alpha",
         "drupal/maillog": "1.x-dev",
         "drupal/mailsystem": "^4.2",
-        "drupal/nexus": "^1.4",
         "drupal/node_export": "1.x-dev",
         "drupal/pathauto": "^1.6",
         "drupal/profile_role_access": "1.x-dev",
