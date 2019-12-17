@@ -54,3 +54,18 @@ use Drupal\Core\Url;
         $request->query->set('destination', $request->request->get('destination'));
       }
     }
+
+    function projetgr4_mail($key, &$message, $params)
+    {
+      $message['headers']['Content-Type'] = 'text/html; charset=UTF-8\n; format=flowed; delsp=yes';
+      $message['headers']['MIME-Version'] = '1.0';
+      $message['headers']['Content-Transfer-Encoding'] = '8bit';
+      $message['headers']['X-Mailer'] = 'Drupal';
+      switch ($key) {
+        case 'mykey':
+          $message['from'] = 'ria.thas20@gmail.com';
+          $message['subject'] = t('@title', array('@title' => $params['subject']));
+          $message['body'][] = $params['body'];
+          break;
+      }
+    }

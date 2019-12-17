@@ -15,3 +15,9 @@ projetgr4.participants:
   route_name: projetgr4.participants
   base_route: entity.node.canonical
   weight: 30
+
+projetgr4.email:
+  title: Send Email
+  route_name: projetgr4.email
+  base_route: entity.user.canonical
+  weight: 5
