@@ -80,19 +80,18 @@ class ProgrammesController extends ControllerBase{
       foreach($list as $owner){
         $owners = $owner->getOwnerId(); // Retourne le numéro (id) d'un participants
         $account = Drupal::entityTypeManager()->getStorage('user')->load($owners);
+        $participants[] = [$account->get('field_prenom')->value, $account->get('field_nom')->value,
+                         $account->get('mail')->value,];
 
-        $prenom = $account->get('field_prenom')->value;
-        $nom = $account->get('field_nom')->value;
-
-        $participant = $prenom . ' ' . ' ' . $nom;
-
-        $participants[] = $participant;
       }
-        return [
-          '#theme' => 'item_list',
-          '#items' => $participants,
-          '#title' => $this->t('Liste des participants'),
+
+    $list_participant =  [
+          '#type' => 'table',
+          '#header' => ['Nom', 'Prenom', 'Email'],
+          '#rows' => $participants,
+          '#empty'=> $this->t('none participation yet'),
         ];
+    return [$list_participant];
       }
 
 }

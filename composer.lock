@@ -6,7 +6,7 @@
     ],
 
 
-    "content-hash": "7bb33434ab8950d3925582024819c013",
+    "content-hash": "ec7f9a980a745f83cbfeaf519c2a7caf",
     "packages": [
         {
             "name": "alchemy/zippy",

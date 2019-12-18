@@ -1,2 +1,5 @@
-
-    
+services:
+  access_check.conference:
+    class: Drupal\projetgr4\Access\ConferenceAccessCheck
+    tags:
+      - { name: access_check, applies_to: _access_conference}

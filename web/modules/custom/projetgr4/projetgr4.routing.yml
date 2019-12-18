@@ -23,7 +23,7 @@ projetgr4.participants:
     _controller: '\Drupal\projetgr4\Controller\ProgrammesController::list_participants'
     node: ''
   requirements:
-    _access: 'TRUE'
+    _access_conference: 'TRUE'
   options:
     parameters:
       node:
