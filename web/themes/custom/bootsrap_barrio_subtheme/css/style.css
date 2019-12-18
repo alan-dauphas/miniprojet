@@ -11,7 +11,7 @@
 
 
 /* underlines the link of the current page */
-a.navbar-link .active{
+a.navbar-link, .active {
   text-decoration: underline;
 }
 

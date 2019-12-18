@@ -9,9 +9,7 @@ dependencies:
     - field.storage.node.field_date_de_debut
     - field.storage.node.field_date_de_fin
     - field.storage.node.field_hotels
-    - field.storage.node.field_inscription
     - field.storage.node.field_organisateurs
-    - field.storage.node.field_participants
     - node.type.programmes
     - system.menu.main
   module:
@@ -19,7 +17,6 @@ dependencies:
     - node
     - text
     - user
-    - webform
 id: conference
 label: Conférence
 module: views
@@ -104,27 +101,38 @@ display:
           id: title
           table: node_field_data
           field: title
-          entity_type: node
-          entity_field: title
-          label: ''
-          alter:
-            alter_text: false
-            make_link: false
-            absolute: false
-            trim: false
-            word_boundary: false
-            ellipsis: false
-            strip_tags: false
-            html: false
-          hide_empty: false
-          empty_zero: false
-          settings:
-            link_to_entity: true
-          plugin_id: field
           relationship: none
           group_type: group
           admin_label: ''
+          label: Titre
           exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: false
+            ellipsis: false
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
           element_type: ''
           element_class: ''
           element_label_type: ''
@@ -134,9 +142,13 @@ display:
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
+          hide_empty: false
+          empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
           type: string
+          settings:
+            link_to_entity: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -147,6 +159,9 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          entity_type: node
+          entity_field: title
+          plugin_id: field
         field_budget:
           id: field_budget
           table: node__field_budget
@@ -156,6 +171,63 @@ display:
           id: body
           table: node__body
           field: body
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Description
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
           plugin_id: field
         field_date_de_debut:
           id: field_date_de_debut
@@ -176,16 +248,6 @@ display:
           id: field_organisateurs
           table: node__field_organisateurs
           field: field_organisateurs
-          plugin_id: field
-        field_participants:
-          id: field_participants
-          table: node__field_participants
-          field: field_participants
-          plugin_id: field
-        field_inscription:
-          id: field_inscription
-          table: node__field_inscription
-          field: field_inscription
           plugin_id: field
       filters:
         status:
@@ -224,7 +286,7 @@ display:
           expose:
             label: ''
           granularity: second
-      title: Conférence
+      title: Conférences
       header: {  }
       footer: {  }
       empty: {  }
@@ -245,9 +307,7 @@ display:
         - 'config:field.storage.node.field_date_de_debut'
         - 'config:field.storage.node.field_date_de_fin'
         - 'config:field.storage.node.field_hotels'
-        - 'config:field.storage.node.field_inscription'
         - 'config:field.storage.node.field_organisateurs'
-        - 'config:field.storage.node.field_participants'
   page_1:
     display_plugin: page
     id: page_1
@@ -279,6 +339,4 @@ display:
         - 'config:field.storage.node.field_date_de_debut'
         - 'config:field.storage.node.field_date_de_fin'
         - 'config:field.storage.node.field_hotels'
-        - 'config:field.storage.node.field_inscription'
         - 'config:field.storage.node.field_organisateurs'
-        - 'config:field.storage.node.field_participants'

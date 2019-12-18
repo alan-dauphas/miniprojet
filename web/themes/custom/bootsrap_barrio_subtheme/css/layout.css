@@ -4,3 +4,25 @@
   justify-content: flex-end;
   margin-right: 2%;
 }
+
+@media screen and (min-width: 768px) {
+  .col-md-4 {
+    flex: 0 0 33.333333%;
+    max-width: 23%;
+  }
+}
+
+
+.site-footer__bottom .region {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.region-footer-fifth .nav-link {
+  color: #9EB0B0;
+}
+.region-footer-fifth .nav-link:hover {
+  color: #902b2b;
+}
+
