@@ -75,23 +75,25 @@ class ProgrammesController extends ControllerBase{
       $list = $this->entityTypeManager()->getStorage('webform_submission')
         ->loadByProperties(['entity_id'=> $nbNode]);
 
+
       $participants = [];
 
       foreach($list as $owner){
+        $owner->getData()['status'];
         $owners = $owner->getOwnerId(); // Retourne le numéro (id) d'un participants
         $account = Drupal::entityTypeManager()->getStorage('user')->load($owners);
         $participants[] = [$account->get('field_prenom')->value, $account->get('field_nom')->value,
-                         $account->get('mail')->value,];
+               $account->get('mail')->value,];
 
       }
 
-    $list_participant =  [
-          '#type' => 'table',
-          '#header' => ['Nom', 'Prenom', 'Email'],
-          '#rows' => $participants,
-          '#empty'=> $this->t('none participation yet'),
-        ];
-    return [$list_participant];
+      $list_participant =  [
+            '#type' => 'table',
+            '#header' => ['Nom', 'Prenom', 'Email'],
+            '#rows' => $participants,
+            '#empty'=> $this->t('none participation yet'),
+          ];
+      return [$list_participant];
       }
 
 }
