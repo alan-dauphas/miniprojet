@@ -10,9 +10,9 @@ palette:
   titleslogan: '#353030'
   text: '#C1A996'
   link: '#353030'
-logo: 'public://color/bootstrap_barrio_subtheme-58eb090b/logo.svg'
+logo: 'public://color/bootstrap_barrio_subtheme-18c0d9d3/logo.svg'
 stylesheets:
-  - 'public://color/bootstrap_barrio_subtheme-58eb090b/colors.css'
+  - 'public://color/bootstrap_barrio_subtheme-18c0d9d3/colors.css'
 files:
-  - 'public://color/bootstrap_barrio_subtheme-58eb090b/logo.svg'
-  - 'public://color/bootstrap_barrio_subtheme-58eb090b/colors.css'
+  - 'public://color/bootstrap_barrio_subtheme-18c0d9d3/logo.svg'
+  - 'public://color/bootstrap_barrio_subtheme-18c0d9d3/colors.css'

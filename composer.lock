@@ -4,6 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+
+
     "content-hash": "ec7f9a980a745f83cbfeaf519c2a7caf",
     "packages": [
         {
@@ -3292,69 +3294,6 @@
             "homepage": "https://www.drupal.org/project/mailsystem",
             "support": {
                 "source": "https://git.drupalcode.org/project/mailsystem"
-            }
-        },
-        {
-            "name": "drupal/nexus",
-            "version": "1.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/nexus.git",
-                "reference": "8.x-1.4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/nexus-8.x-1.4.zip",
-                "reference": "8.x-1.4",
-                "shasum": "15706a504b734051bbf061ff05a25d3e732d1f5a"
-            },
-            "require": {
-                "drupal/core": "~8.0"
-            },
-            "type": "drupal-theme",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.4",
-                    "datestamp": "1528444984",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Karmen",
-                    "homepage": "https://www.drupal.org/user/2267652"
-                },
-                {
-                    "name": "devsaran",
-                    "homepage": "https://www.drupal.org/user/1031208"
-                },
-                {
-                    "name": "dipakmdhrm",
-                    "homepage": "https://www.drupal.org/user/1687410"
-                },
-                {
-                    "name": "mheinke",
-                    "homepage": "https://www.drupal.org/user/615306"
-                },
-                {
-                    "name": "nesta_",
-                    "homepage": "https://www.drupal.org/user/370767"
-                }
-            ],
-            "description": "Nexus Theme is a premium Drupal 7 theme. Developed by <a href=\"http://www.devsaran.com\">Devsaran.com</a>.",
-            "homepage": "https://www.drupal.org/project/nexus",
-            "support": {
-                "source": "https://git.drupalcode.org/project/nexus"
             }
         },
         {

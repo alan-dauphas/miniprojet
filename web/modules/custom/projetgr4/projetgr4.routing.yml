@@ -23,7 +23,7 @@ projetgr4.participants:
     _controller: '\Drupal\projetgr4\Controller\ProgrammesController::list_participants'
     node: ''
   requirements:
-    _access: 'TRUE'
+    _access_conference: 'TRUE'
   options:
     parameters:
       node:
@@ -32,7 +32,7 @@ projetgr4.participants:
 projetgr4.email:
   path: 'user/{user}/email'
   defaults:
-    _title: 'email'
+    _title: 'Email'
     _form: '\Drupal\projetgr4\Form\EmailForm'
   requirements:
-    _permission: 'administrator, organisateur'
+    _custom_access: '\Drupal\projetgr4\Controller\ProgrammesController::email'

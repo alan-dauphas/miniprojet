@@ -1,4 +1,4 @@
-uuid: 000cdbdd-6f96-4e60-8466-c5c7514cbc8e
+uuid: 1ac24328-de4a-453d-8d19-b36c1329cce0
 langcode: fr
 status: true
 dependencies:
@@ -6,13 +6,12 @@ dependencies:
     - system.menu.tools
   module:
     - system
-    - user
   theme:
-    - bootstrap_barrio_subtheme
+    - bartik
 _core:
   default_config_hash: rH6PpAn7-RScha1rGkohGAYSSh_1OVeZzioJPzPw6O4
-id: bootstrap_barrio_subtheme_tools
-theme: bootstrap_barrio_subtheme
+id: bartik_tools
+theme: bartik
 region: sidebar_first
 weight: 0
 provider: null
@@ -25,12 +24,4 @@ settings:
   level: 1
   depth: 0
   expand_all_items: false
-visibility:
-  user_role:
-    id: user_role
-    roles:
-      administrator: administrator
-      organisateur: organisateur
-    negate: false
-    context_mapping:
-      user: '@user.current_user_context:current_user'
+visibility: {  }

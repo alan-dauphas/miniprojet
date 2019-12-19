@@ -66,35 +66,75 @@ class ProgrammesController extends ControllerBase{
       }
       return AccessResult::allowed();
     }
+  public function email(){
+    $is_organisateur = \Drupal::currentUser()->getRoles();
+    if($is_organisateur == 'organisateur' || $is_organisateur == 'administrator' ){
+      return AccessResult::allowed()();
+    }
+    return AccessResult::forbidden();
+  }
 
 
+//  public function list_participants(Drupal\node\NodeInterface $node){
+//
+//      $nbNode = $node->id(); // Retourne le numéro (id) du node
+//    $query = \Drupal::database()->select('webform_submission_data', 's');
+//    $query->fields('s', ['sid'])
+//      ->condition('s.name', 'status')
+//      ->condition('s.value', 'acceptée');
+//    $sid_entity_id = $query->execute();
+//
+//    $participants = [];
+//    foreach ($sid_entity_id as $sid){
+//
+////    $list = $this->entityTypeManager()->getStorage('webform_submission')
+////        ->loadByProperties(['sid'=> $sid]);
+//      $query = \Drupal::database()->select('webform_submission', 's');
+//      $query->fields('s', ['uid'])
+//        ->condition('s.sid', $sid);
+//
+//      $user_id = $query->execute();
+//      kint($user_id);
+//
+//
+//
+//      foreach($user_id as $owner){
+//
+////        $owners = $owner->getOwnerId(); // Retourne le numéro (id) d'un participants
+//        $account = Drupal::entityTypeManager()->getStorage('user')->load($owner);
+//        $participants[] = [$account->get('field_prenom')->value, $account->get('field_nom')->value,
+//               $account->get('mail')->value,];
+//
+//      }
+//
+//      $list_participant =  [
+//            '#type' => 'table',
+//            '#header' => ['Nom', 'Prenom', 'Email'],
+//            '#rows' => $participants,
+//            '#empty'=> $this->t('none participation yet'),
+//          ];
+//
+//      }
+//    return [$list_participant];
+//  }
   public function list_participants(Drupal\node\NodeInterface $node){
-
-      $nbNode = $node->id(); // Retourne le numéro (id) du node
-
-      $list = $this->entityTypeManager()->getStorage('webform_submission')
-        ->loadByProperties(['entity_id'=> $nbNode]);
-
-      $participants = [];
-
-      foreach($list as $owner){
-        $owners = $owner->getOwnerId(); // Retourne le numéro (id) d'un participants
-        $account = Drupal::entityTypeManager()->getStorage('user')->load($owners);
-
-        $prenom = $account->get('field_prenom')->value;
-        $nom = $account->get('field_nom')->value;
-
-        $participant = $prenom . ' ' . ' ' . $nom;
-
-        $participants[] = $participant;
-      }
-
-
-        return [
-          '#theme' => 'item_list',
-          '#items' => $participants,
-          '#title' => $this->t('Liste des participants'),
-        ];
-      }
-
+    $nbNode = $node->id(); // Retourne le numéro (id) du node
+    $list = $this->entityTypeManager()->getStorage('webform_submission')
+      ->loadByProperties(['entity_id'=> $nbNode]);
+    $participants = [];
+    foreach($list as $owner){
+      $owner->getData()['status'];
+      $owners = $owner->getOwnerId(); // Retourne le numéro (id) d'un participants
+      $account = Drupal::entityTypeManager()->getStorage('user')->load($owners);
+      $participants[] = [$account->get('field_prenom')->value, $account->get('field_nom')->value,
+        $account->get('mail')->value,];
+    }
+    $list_participant =  [
+      '#type' => 'table',
+      '#header' => ['Nom', 'Prenom', 'Email'],
+      '#rows' => $participants,
+      '#empty'=> $this->t('none participation yet'),
+    ];
+    return [$list_participant];
+  }
 }
