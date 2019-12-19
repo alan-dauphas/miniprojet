@@ -48,14 +48,14 @@ class EmailForm extends FormBase
       '#access' => TRUE,
       '#required' => TRUE,
     ];
-   
-    $form['status'] = [
-      '#theme' => 'item_list',
-      '#title' => $this->t('Send Mail To'),
-      '#items' => $user_name,
-      '#access' => TRUE,
-      '#required' => TRUE,
-    ];
+
+//    $form['status'] = [
+//      '#theme' => 'item_list',
+//      '#title' => $this->t('Send Mail To'),
+//      '#items' => $user_name,
+//      '#access' => TRUE,
+//      '#required' => TRUE,
+//    ];
 
     $form['subject'] = [
       '#type' => 'textfield',
@@ -134,7 +134,7 @@ class EmailForm extends FormBase
     $body = $form_state->getValue('email_body')['value'];
     $user = $form_state->getValue('users');
     $user1 = array_filter($user);
-    ksm($user1);
+
     $params = array(
       'subject' => $subject,
       'body' => $body,
