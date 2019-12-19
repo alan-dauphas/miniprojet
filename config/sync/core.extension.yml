@@ -9,6 +9,7 @@ module:
   big_pipe: 0
   block: 0
   block_content: 0
+  bootstrap_simple_carousel: 0
   breakpoint: 0
   ckeditor: 0
   color: 0

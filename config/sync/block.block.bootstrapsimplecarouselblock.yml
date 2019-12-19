@@ -1,0 +1,20 @@
+uuid: 2d187c75-7259-402f-9371-86e6d38e920b
+langcode: fr
+status: true
+dependencies:
+  module:
+    - bootstrap_simple_carousel
+  theme:
+    - bootstrap_barrio_subtheme
+id: bootstrapsimplecarouselblock
+theme: bootstrap_barrio_subtheme
+region: highlighted
+weight: -6
+provider: null
+plugin: bootstrap_simple_carousel_block
+settings:
+  id: bootstrap_simple_carousel_block
+  label: 'Bootstrap simple carousel block'
+  provider: bootstrap_simple_carousel
+  label_display: '0'
+visibility: {  }

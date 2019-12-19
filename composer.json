@@ -24,6 +24,7 @@
         "drupal/admin_toolbar": "^2.0",
         "drupal/backup_migrate": "^4.0",
         "drupal/bootstrap_barrio": "^4.22",
+        "drupal/bootstrap_simple_carousel": "^1.31",
         "drupal/config_split": "^1.4",
         "drupal/console": "^1.9",
         "drupal/content_access": "^1.0@alpha",
