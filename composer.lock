@@ -1,12 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-
-
-    "content-hash": "ec7f9a980a745f83cbfeaf519c2a7caf",
+    "content-hash": "c88a9e59d70a3c4c4b69d3c7900a97c5",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2181,6 +2179,56 @@
             }
         },
         {
+            "name": "drupal/bootstrap_simple_carousel",
+            "version": "1.31.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/bootstrap_simple_carousel.git",
+                "reference": "8.x-1.31"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/bootstrap_simple_carousel-8.x-1.31.zip",
+                "reference": "8.x-1.31",
+                "shasum": "42d314d152800eeb010dd03f6099c26e34c32f7c"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.31",
+                    "datestamp": "1576053780",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Dzianis Kel (asmdk)",
+                    "homepage": "https://www.drupal.org/u/asmdk",
+                    "email": "asm32dk@gmail.com",
+                    "role": "maintainer"
+                }
+            ],
+            "description": "The module provides the simple bootstrap carousel.",
+            "homepage": "https://drupal.org/project/bootstrap_simple_carousel",
+            "support": {
+                "source": "https://cgit.drupalcode.org/bootstrap_simple_carousel",
+                "issues": "https://drupal.org/project/issues/bootstrap_simple_carousel"
+            }
+        },
+        {
             "name": "drupal/config_filter",
             "version": "1.5.0",
             "source": {
@@ -3227,7 +3275,7 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/maillog"
             },
-            "time": "2016-08-05T21:18:07+00:00"
+            "time": "2016-08-05 21:18:07"
         },
         {
             "name": "drupal/mailsystem",
@@ -3363,7 +3411,7 @@
                 "source": "http://cgit.drupalcode.org/node_export",
                 "issues": "https://www.drupal.org/project/issues/node_export"
             },
-            "time": "2019-04-01T13:53:47+00:00"
+            "time": "2019-04-01 13:53:47"
         },
         {
             "name": "drupal/pathauto",
@@ -3467,7 +3515,7 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/profile_role_access"
             },
-            "time": "2016-11-06T12:29:36+00:00"
+            "time": "2016-11-06 12:29:36"
         },
         {
             "name": "drupal/registration_role",
@@ -7826,7 +7874,7 @@
                 "testing",
                 "web"
             ],
-            "time": "2019-07-15T12:45:29+00:00"
+            "time": "2019-07-15 12:45:29"
         },
         {
             "name": "behat/mink-browserkit-driver",
@@ -7998,7 +8046,7 @@
                 "testing",
                 "webdriver"
             ],
-            "time": "2019-09-02T09:46:54+00:00"
+            "time": "2019-09-02 09:46:54"
         },
         {
             "name": "doctrine/instantiator",

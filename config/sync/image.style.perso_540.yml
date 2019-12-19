@@ -1,0 +1,15 @@
+uuid: 0f2ded7d-2003-4096-a6b0-94bfb061990b
+langcode: fr
+status: true
+dependencies: {  }
+name: perso_540
+label: 'Diapo (1400x600)'
+effects:
+  ea34dd8f-8c21-4f78-9620-88e3c302cef7:
+    uuid: ea34dd8f-8c21-4f78-9620-88e3c302cef7
+    id: image_scale
+    weight: 1
+    data:
+      width: 1400
+      height: 600
+      upscale: true
